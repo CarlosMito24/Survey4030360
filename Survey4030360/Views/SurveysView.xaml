@@ -18,12 +18,15 @@
             SelectionChanged="CollectionView_SelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:SurveyItem">
-                        <Grid ColumnDefinitions="*, Auto, Auto" Padding="20">
+                        <Grid ColumnDefinitions="*, *, *" Padding="20">
                             <Label Text="{Binding Name}"
                                    VerticalTextAlignment="Center"/>
                             <Label Text="{Binding EquipoFavorito}"
                                    VerticalTextAlignment="Center"
                                    Grid.Column="1"/>
+                            <Label Text="{Binding Birthdate}"
+                                   VerticalTextAlignment="Center"
+                                   Grid.Column="2"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

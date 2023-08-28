@@ -15,6 +15,7 @@ public partial class SurveyDetailsView : ContentPage
     }
 
     SurveyItemDatabase database;
+
     public SurveyDetailsView(SurveyItemDatabase surveyItemDatabase)
     {
         InitializeComponent();
@@ -24,9 +25,12 @@ public partial class SurveyDetailsView : ContentPage
 
     async void OnSaveClicked(object sender, EventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(Item.Name))
+        Item.Birthdate = BirthdatePicker.Date;
+        
+
+        if (string.IsNullOrWhiteSpace(Item.Name) && string.IsNullOrWhiteSpace(Item.EquipoFavorito))
         {
-            await DisplayAlert("Name Required", "Please insert a name for To Do item", "OK");
+            await DisplayAlert("Ingrese los datos requeridos", "Por favor completa todos los datos solicitados", "OK");
             return;
         }
 
@@ -45,5 +49,11 @@ public partial class SurveyDetailsView : ContentPage
     async void OnCancelClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("..");
+    }
+
+    async void ExpandirClicked (object sender, EventArgs e)
+    {
+        RealMadrid.IsVisible = true;
+        BayerMunchen.IsVisible = true;
     }
 }

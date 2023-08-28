@@ -30,7 +30,6 @@ namespace Survey4030360.Data
             return await Database.Table<SurveyItem>().ToListAsync();
         }
 
-
         public async Task<SurveyItem> GetItemAsync(int id)
         {
             await Init();

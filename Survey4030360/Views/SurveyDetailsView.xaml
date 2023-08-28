@@ -7,18 +7,41 @@
              x:DataType="models:SurveyItem">
 
     <ScrollView>
-        <VerticalStackLayout Padding="20"
-                         Spacing="10"
-                         VerticalOptions="StartAndExpand">
-            <Label Text="Name"/>
+        <VerticalStackLayout VerticalOptions="StartAndExpand">
+            <Label Text="Name" Margin="10, 10, 10, 10"/>
             <Entry Text="{Binding Name}"/>
-            <Label Text="Equipo Favorito"/>
-            <Entry Text="{Binding EquipoFavorito}"/>
-            <Button Text="Save"
+
+            <Label Text="Fecha de nacimiento" Margin="10, 10, 10, 10"/>
+            <DatePicker x:Name="BirthdatePicker" Margin="10, 10, 10, 10"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Ingresa el nombre de un equipo favorito" Grid.ColumnSpan="2" Grid.Row="0" Margin="10,10, 10,10"/>
+                <Entry Text="{Binding EquipoFavorito}" Grid.Column="0" Grid.Row="1" Margin="10,10, 10,10"/>
+                <Button Text="Expandir" CornerRadius="25" Grid.Column="1" Grid.Row="1" Margin="10,10, 10,10" Clicked="ExpandirClicked"/>
+            </Grid>
+
+            <Button Text="Real Madrid CF" Margin="10, 1, 10, 1" x:Name="RealMadrid" IsVisible="false"/>
+            <Button Text="FC Bayern Múnchen" Margin="10, 1, 10, 1" x:Name="BayerMunchen" IsVisible="false"/>
+            <Button Text="FC Barcelona" Margin="10, 1, 10, 1" x:Name="Barcelona" IsVisible="false"/>
+            <Button Text="Manchester City" Margin="10, 1, 10, 1" x:Name="ManCity" IsVisible="false"/>
+            <Button Text="Manchester United" Margin="10, 1, 10, 1" x:Name="ManU" IsVisible="false"/>
+            <Button Text="Borrusia Dortmund" Margin="10, 1, 10, 1" x:Name="BVB" IsVisible="false"/>
+
+            <Button Text="Save" Margin="10, 10, 10, 1"
                 Clicked="OnSaveClicked"/>
-            <Button Text="Delete"
+            <Button Text="Delete" Margin="10, 1, 10, 1"
                 Clicked="OnDeleteClicked"/>
-            <Button Text="Cancel"
+            <Button Text="Cancel" Margin="10, 1, 10, 1"
                 Clicked="OnCancelClicked"/>
         </VerticalStackLayout>
     </ScrollView>
