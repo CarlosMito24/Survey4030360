@@ -26,16 +26,16 @@
                 </Grid.RowDefinitions>
 
                 <Label Text="Ingresa el nombre de un equipo favorito" Grid.ColumnSpan="2" Grid.Row="0" Margin="10,10, 10,10"/>
-                <Entry Text="{Binding EquipoFavorito}" Grid.Column="0" Grid.Row="1" Margin="10,10, 10,10"/>
+                <Entry Text="{Binding EquipoFavorito}" Grid.Column="0" Grid.Row="1" Margin="10,10, 10,10" x:Name="Equipo" IsEnabled="False"/>
                 <Button Text="Expandir" CornerRadius="25" Grid.Column="1" Grid.Row="1" Margin="10,10, 10,10" Clicked="ExpandirClicked"/>
             </Grid>
 
-            <Button Text="Real Madrid CF" Margin="10, 1, 10, 1" x:Name="RealMadrid" IsVisible="false"/>
-            <Button Text="FC Bayern Múnchen" Margin="10, 1, 10, 1" x:Name="BayerMunchen" IsVisible="false"/>
-            <Button Text="FC Barcelona" Margin="10, 1, 10, 1" x:Name="Barcelona" IsVisible="false"/>
-            <Button Text="Manchester City" Margin="10, 1, 10, 1" x:Name="ManCity" IsVisible="false"/>
-            <Button Text="Manchester United" Margin="10, 1, 10, 1" x:Name="ManU" IsVisible="false"/>
-            <Button Text="Borrusia Dortmund" Margin="10, 1, 10, 1" x:Name="BVB" IsVisible="false"/>
+            <Button Text="Real Madrid CF" Margin="10, 1, 10, 1" x:Name="RealMadrid" IsVisible="false" Clicked="RealMadrid_Clicked"/>
+            <Button Text="FC Bayern Múnchen" Margin="10, 1, 10, 1" x:Name="BayerMunchen" IsVisible="false" Clicked="BayerMunchen_Clicked"/>
+            <Button Text="FC Barcelona" Margin="10, 1, 10, 1" x:Name="Barcelona" IsVisible="false" Clicked="Barcelona_Clicked"/>
+            <Button Text="Manchester City" Margin="10, 1, 10, 1" x:Name="ManCity" IsVisible="false" Clicked="ManCity_Clicked"/>
+            <Button Text="Manchester United" Margin="10, 1, 10, 1" x:Name="ManU" IsVisible="false" Clicked="ManU_Clicked"/>
+            <Button Text="Borussia Dortmund" Margin="10, 1, 10, 1" x:Name="BVB" IsVisible="false" Clicked="BVB_Clicked"/>
 
             <Button Text="Save" Margin="10, 10, 10, 1"
                 Clicked="OnSaveClicked"/>

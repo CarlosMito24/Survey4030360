@@ -20,14 +20,12 @@ public partial class SurveyDetailsView : ContentPage
     {
         InitializeComponent();
         database = surveyItemDatabase;
-
     }
 
     async void OnSaveClicked(object sender, EventArgs e)
     {
         Item.Birthdate = BirthdatePicker.Date;
         
-
         if (string.IsNullOrWhiteSpace(Item.Name) && string.IsNullOrWhiteSpace(Item.EquipoFavorito))
         {
             await DisplayAlert("Ingrese los datos requeridos", "Por favor completa todos los datos solicitados", "OK");
@@ -51,9 +49,79 @@ public partial class SurveyDetailsView : ContentPage
         await Shell.Current.GoToAsync("..");
     }
 
-    async void ExpandirClicked (object sender, EventArgs e)
+    private void ExpandirClicked (object sender, EventArgs e)
     {
         RealMadrid.IsVisible = true;
         BayerMunchen.IsVisible = true;
+        Barcelona.IsVisible = true;
+        ManCity.IsVisible = true;
+        ManU.IsVisible = true;
+        BVB.IsVisible = true;
+    }
+
+    private void RealMadrid_Clicked(object sender, EventArgs e)
+    {
+        Equipo.Text = "Real Madrid CF";
+        RealMadrid.IsVisible = false;
+        BayerMunchen.IsVisible = false;
+        Barcelona.IsVisible = false;
+        ManCity.IsVisible = false;
+        ManU.IsVisible = false;
+        BVB.IsVisible = false;
+    }
+
+    private void BayerMunchen_Clicked(object sender, EventArgs e)
+    {
+        Equipo.Text = "FC Bayern Múnchen";
+        RealMadrid.IsVisible = false;
+        BayerMunchen.IsVisible = false;
+        Barcelona.IsVisible = false;
+        ManCity.IsVisible = false;
+        ManU.IsVisible = false;
+        BVB.IsVisible = false;
+    }
+
+    private void Barcelona_Clicked(object sender, EventArgs e)
+    {
+        Equipo.Text = "FC Barcelona";
+        RealMadrid.IsVisible = false;
+        BayerMunchen.IsVisible = false;
+        Barcelona.IsVisible = false;
+        ManCity.IsVisible = false;
+        ManU.IsVisible = false;
+        BVB.IsVisible = false;
+    }
+
+    private void ManCity_Clicked(object sender, EventArgs e)
+    {
+        Equipo.Text = "Manchester City";
+        RealMadrid.IsVisible = false;
+        BayerMunchen.IsVisible = false;
+        Barcelona.IsVisible = false;
+        ManCity.IsVisible = false;
+        ManU.IsVisible = false;
+        BVB.IsVisible = false;
+    }
+
+    private void ManU_Clicked(object sender, EventArgs e)
+    {
+        Equipo.Text = "Manchester United";
+        RealMadrid.IsVisible = false;
+        BayerMunchen.IsVisible = false;
+        Barcelona.IsVisible = false;
+        ManCity.IsVisible = false;
+        ManU.IsVisible = false;
+        BVB.IsVisible = false;
+    }
+
+    private void BVB_Clicked(object sender, EventArgs e)
+    {
+        Equipo.Text = "Borussia Dortmund";
+        RealMadrid.IsVisible = false;
+        BayerMunchen.IsVisible = false;
+        Barcelona.IsVisible = false;
+        ManCity.IsVisible = false;
+        ManU.IsVisible = false;
+        BVB.IsVisible = false;
     }
 }
