@@ -22,29 +22,46 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
                 <Label Text="Día:" 
-                   Margin="10, 10, 10, 10"/>
+                       Margin="10, 10, 10, 10"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
                 <Entry Text="{Binding Dia}" 
-                   Margin="10, 10, 10, 10" 
-                   MaxLength="10" 
-                   Placeholder="00" 
-                   Keyboard="Numeric"/>
+                       Margin="10, 10, 10, 10" 
+                       MaxLength="2" 
+                       Placeholder="00" 
+                       Keyboard="Numeric"
+                       Grid.Row="1"
+                       Grid.Column="0"/>
 
-                <Label Text="Día:" 
-                   Margin="10, 10, 10, 10"/>
+                <Label Text="Mes:" 
+                       Margin="10, 10, 10, 10"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
                 <Entry Text="{Binding Mes}" 
-                   Margin="10, 10, 10, 10" 
-                   MaxLength="10" 
-                   Placeholder="00" 
-                   Keyboard="Numeric"/>
+                       Margin="10, 10, 10, 10" 
+                       MaxLength="2" 
+                       Placeholder="00" 
+                       Keyboard="Numeric"
+                       Grid.Row="1"
+                       Grid.Column="1"/>
 
-                <Label Text="Día:" 
-                   Margin="10, 10, 10, 10"/>
+                <Label Text="Año:" 
+                   Margin="10, 10, 10, 10"
+                       Grid.Row="0"
+                       Grid.Column="2"/>
                 <Entry Text="{Binding Año}" 
-                   Margin="10, 10, 10, 10" 
-                   MaxLength="10" 
-                   Placeholder="00" 
-                   Keyboard="Numeric"/>
+                       Margin="10, 10, 10, 10" 
+                       MaxLength="4" 
+                       Placeholder="0000" 
+                       Keyboard="Numeric"
+                       Grid.Row="1"
+                       Grid.Column="2"/>
             </Grid>
             
             <Label Text="Ingresa el nombre de un equipo favorito:" 

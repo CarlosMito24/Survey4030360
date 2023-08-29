@@ -26,25 +26,25 @@ public partial class SurveyDetailsView : ContentPage
     {
         if (string.IsNullOrWhiteSpace(Item.Name))
         {
-            await DisplayAlert("Falta nombre de encuestado", "Ingrese un nombre de encuestado", "OK");
+            await DisplayAlert("Falta el del nombre de encuestado", "Ingrese el nombre del encuestado", "OK");
             return;
         }
 
         if (string.IsNullOrWhiteSpace(Item.Dia))
         {
-            await DisplayAlert("Falta fecha de nacimiento de encuestado", "Ingrese la fecha de nacimiento del encuestado", "OK");
+            await DisplayAlert("Falta el día en la fecha de nacimiento de encuestado", "Ingrese el día en la fecha de nacimiento del encuestado", "OK");
             return;
         }
 
         if (string.IsNullOrWhiteSpace(Item.Mes))
         {
-            await DisplayAlert("Falta fecha de nacimiento de encuestado", "Ingrese la fecha de nacimiento del encuestado", "OK");
+            await DisplayAlert("Falta el mes en la fecha de nacimiento de encuestado", "Ingrese el mes en la fecha de nacimiento del encuestado", "OK");
             return;
         }
 
         if (string.IsNullOrWhiteSpace(Item.Año))
         {
-            await DisplayAlert("Falta fecha de nacimiento de encuestado", "Ingrese la fecha de nacimiento del encuestado", "OK");
+            await DisplayAlert("Falta el año en la fecha de nacimiento de encuestado", "Ingrese el año en la fecha de nacimiento del encuestado", "OK");
             return;
         }
 

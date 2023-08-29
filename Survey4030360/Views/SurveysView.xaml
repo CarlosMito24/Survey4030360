@@ -9,8 +9,13 @@
 
     <ScrollView>
         <Grid RowDefinitions="Auto, *">
-            <Button Grid.Row="0" Text="Agregar" Clicked="OnItemAdded"
-        Margin="20"/>
+            <Button Grid.Row="0" Text="Agregar" 
+                    Clicked="OnItemAdded"
+                    Margin="20"
+                    BackgroundColor="#e6b209" 
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    TextColor="White"/>
             <CollectionView
             VerticalOptions="Fill"
             ItemsSource="{Binding Items}"
