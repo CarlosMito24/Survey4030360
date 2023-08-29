@@ -8,21 +8,70 @@
 
     <ScrollView>
         <VerticalStackLayout VerticalOptions="StartAndExpand">
-            <Label Text="Nombre:" Margin="10, 10, 10, 10"/>
-            <Entry Text="{Binding Name}"/>
+            <Label Text="Nombre:"   
+                   Margin="10, 10, 10, 10"/>
+            <Entry Text="{Binding Name}"
+                   Margin="10, 10, 10, 10"/>
 
-            <Label Text="Fecha de nacimiento:" Margin="10, 10, 10, 10"/>
-            <Entry Text="{Binding Birthdate}" Margin="10, 10, 10, 10" MaxLength="10" Placeholder="DD/MM/AAAA" Keyboard="Numeric"/>
+            <Label Text="Fecha de nacimiento:" 
+                   Margin="10, 10, 10, 10"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
-            <Label Text="Ingresa el nombre de un equipo favorito:" Margin="10,10, 10,10"/>
-            <Entry Text="{Binding EquipoFavorito}" Margin="10,10, 10,10"/>
+                <Label Text="Día:" 
+                   Margin="10, 10, 10, 10"/>
+                <Entry Text="{Binding Dia}" 
+                   Margin="10, 10, 10, 10" 
+                   MaxLength="10" 
+                   Placeholder="00" 
+                   Keyboard="Numeric"/>
+
+                <Label Text="Día:" 
+                   Margin="10, 10, 10, 10"/>
+                <Entry Text="{Binding Mes}" 
+                   Margin="10, 10, 10, 10" 
+                   MaxLength="10" 
+                   Placeholder="00" 
+                   Keyboard="Numeric"/>
+
+                <Label Text="Día:" 
+                   Margin="10, 10, 10, 10"/>
+                <Entry Text="{Binding Año}" 
+                   Margin="10, 10, 10, 10" 
+                   MaxLength="10" 
+                   Placeholder="00" 
+                   Keyboard="Numeric"/>
+            </Grid>
+            
+            <Label Text="Ingresa el nombre de un equipo favorito:" 
+                   Margin="10,10, 10,10"/>
+            <Entry Text="{Binding EquipoFavorito}" 
+                   Margin="10,10, 10,10"/>
 
             <Button Text="Guardar" Margin="10, 10, 10, 1"
-                Clicked="OnSaveClicked"/>
+                    Clicked="OnSaveClicked"
+                    BackgroundColor="#e6b209"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    TextColor="White"/>
+            
             <Button Text="Borrar" Margin="10, 1, 10, 1"
-                Clicked="OnDeleteClicked"/>
+                    Clicked="OnDeleteClicked"
+                    BackgroundColor="#e6b209"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    TextColor="White"/>
+            
             <Button Text="Cancelar" Margin="10, 1, 10, 1"
-                Clicked="OnCancelClicked"/>
+                    Clicked="OnCancelClicked"
+                    BackgroundColor="#e6b209"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    TextColor="White"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

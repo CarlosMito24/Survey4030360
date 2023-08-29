@@ -30,7 +30,19 @@ public partial class SurveyDetailsView : ContentPage
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(Item.Birthdate))
+        if (string.IsNullOrWhiteSpace(Item.Dia))
+        {
+            await DisplayAlert("Falta fecha de nacimiento de encuestado", "Ingrese la fecha de nacimiento del encuestado", "OK");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(Item.Mes))
+        {
+            await DisplayAlert("Falta fecha de nacimiento de encuestado", "Ingrese la fecha de nacimiento del encuestado", "OK");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(Item.Año))
         {
             await DisplayAlert("Falta fecha de nacimiento de encuestado", "Ingrese la fecha de nacimiento del encuestado", "OK");
             return;

@@ -18,15 +18,27 @@
             SelectionChanged="CollectionView_SelectionChanged" Grid.Row="1">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:SurveyItem">
-                        <Grid ColumnDefinitions="*, *, *" Padding="20">
+                        <Grid ColumnDefinitions="*, *, Auto, Auto, Auto, Auto, Auto" Padding="20">
                             <Label Text="{Binding Name}"
                                    VerticalTextAlignment="Center"/>
                             <Label Text="{Binding EquipoFavorito}"
                                    VerticalTextAlignment="Center"
                                    Grid.Column="1"/>
-                            <Label Text="{Binding Birthdate}"
+                            <Label Text="{Binding Dia}"
                                    VerticalTextAlignment="Center"
                                    Grid.Column="2"/>
+                            <Label Text="/"
+                                   VerticalTextAlignment="Center"
+                                   Grid.Column="3"/>
+                            <Label Text="{Binding Mes}"
+                                   VerticalTextAlignment="Center"
+                                   Grid.Column="4"/>
+                            <Label Text="/"
+                                   VerticalTextAlignment="Center"
+                                   Grid.Column="5"/>
+                            <Label Text="{Binding Año}"
+                                   VerticalTextAlignment="Center"
+                                   Grid.Column="6"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
